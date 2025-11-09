@@ -54,18 +54,19 @@ const Hero: React.FC = () => {
               Explore My Work
             </motion.button>
             
-            <motion.button
-              whileHover={{ scale: 1.05, backgroundColor: '#FF2E8D' }}
-              whileTap={{ scale: 0.95 }}
-              className='bg-transparent text-white border-2 border-[#1E90FF] font-bold py-3 px-8 rounded-full flex items-center gap-2'
-              onClick={() => {
-                // Resume download functionality will be added here
-                alert('Resume will be available soon!');
-              }}
-            >
-              Download Resume
-              <Download size={18} />
-            </motion.button>
+<motion.a
+  href="https://drive.google.com/uc?export=download&id=1WCTfoR32KMxXSiOmaSXgMrwmjZYM1u4Q"
+  download
+  target="_blank"
+  rel="noopener noreferrer"
+  whileHover={{ scale: 1.05, backgroundColor: '#FF2E8D' }}
+  whileTap={{ scale: 0.95 }}
+  className="bg-transparent text-white border-2 border-[#1E90FF] font-bold py-3 px-8 rounded-full flex items-center gap-2"
+>
+  Download Resume
+  <Download size={18} />
+</motion.a>
+
           </div>
           
           <div className='mt-10 flex gap-6'>

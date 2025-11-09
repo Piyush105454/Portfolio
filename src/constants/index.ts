@@ -28,16 +28,27 @@ export const navLinks: NavItem[] = [
 ];
 
 export const projects: Project[] = [
-  {
+   {
     id: 1,
-    title: "Swapeat",
+    title: "Team Management System",
     description:
-      "SwapEat is a web-based platform built using Django, featuring real-time location tracking with Leaflet.js and chat integration using Django Channels and WebSockets. It enables efficient food sharing by connecting users through a responsive interface and secure backend. The system supports user authentication, live messaging, and geolocation-based listings. Future updates will include AI-powered food freshness detection and automated report generation.",
-    image: "https://images.pexels.com/photos/7092613/pexels-photo-7092613.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    tags: ["React", "django", "javascript", "CSS"],
-    github: "https://github.com/Piyush105454",
+      "team management system paltform using nextjs and drizzle orm for database management and also create different teams in tech like frontend, backend with community inside problems share.",
+    image: "https://i.ibb.co/RGg1Fdpb/Screenshot-2025-11-10-004843.png",
+    tags: ["Nextjs", "Drizzle ORM", "tailwind CSS"],
+    github: "https://github.com/Piyush105454/humanlink-anonymous-problem-solver",
     link: "https://notable-carlina-piyush105454-4bf50dc7.koyeb.app/",
   },
+  {
+    id: 2,
+    title: "Swapeat",
+    description:
+      "SwapEat is a web-based platform built using Django, featuring real-time location tracking with Leaflet.js and chat integration using Nextjs Channels and WebSockets. It enables efficient food sharing by connecting users through a responsive interface and secure backend. The system supports user authentication, live messaging, and geolocation-based listings.",
+    image: "https://i.ibb.co/KHvdbHJ/Screenshot-2025-11-10-005205.png",
+    tags: ["React", "supabase", "typescript", "CSS"],
+    github: "https://github.com/Piyush105454/swapeat",
+    link: "https://swap-bite-find.onrender.com/",
+  },
+ 
   
    
  
@@ -79,34 +90,41 @@ export const technologies: TechSkill[] = [
   },
   {
     id: 4,
-    name: "React",
+    name: "React.js",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
     proficiency: 80,
     category: "frontend"
   },
   {
     id: 5,
+    name: "Next.js",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    proficiency: 80,
+    category: "frontend"
+  },
+  {
+    id: 6,
     name: "Tailwind CSS",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
     proficiency: 75,
     category: "frontend"
   },
   {
-    id: 6,
+    id: 7,
     name: "Python",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
     proficiency: 90,
     category: "backend"
   },
   {
-    id: 7,
+    id: 8,
     name: "Node.js",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
     proficiency: 75,
     category: "backend"
   },
   {
-    id: 8,
+    id: 9,
     name: "Django",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
     proficiency: 70,
@@ -131,6 +149,13 @@ export const technologies: TechSkill[] = [
   },
   {
     id: 17,
+    name: "FastAPI",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg",
+    proficiency: 70,
+    category: "ai"
+  },
+  {
+    id: 18,
     name: "Git",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
     proficiency: 80,
@@ -170,6 +195,6 @@ export const socials: Social[] = [
     id: 3,
     name: "Instagram",
     icon: "instagram",
-    url: "https://instagram.com/",
+    url: "https://www.instagram.com/piyush_tamoli/?hl=en",
   },
 ];
