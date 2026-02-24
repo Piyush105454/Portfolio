@@ -28,18 +28,50 @@ export const navLinks: NavItem[] = [
 ];
 
 export const projects: Project[] = [
-   {
+  {
     id: 1,
+    title: "Clas - School Management System",
+    description:
+      "Clas is a comprehensive school management system built with Django, HTML, JavaScript, and CSS. It provides an intuitive interface for managing students, teachers, classes, and academic records.",
+    image: "https://user2995.na.imgto.link/public/20260224/screenshot-2026-02-24-171409.avif",
+    tags: [ "django","html","javascript", "CSS","postgresql"],
+    github: "https://github.com/hackerpsyco/try",
+    link: "https://clas.wazireducationsociety.org/",
+  },
+   {
+    id: 2,
+    title: "Volunteers Management System",
+    description:
+      "A volunteer management system built using  React, Supabase, TypeScript for efficient database management. The platform allows users to create and manage teams in various tech domains, fostering a collaborative community for sharing problems and solutions.",
+    image: "https://user2995.na.imgto.link/public/20260224/screenshot-2026-02-24-171516.avif",
+    tags: ["React", "supabase", "typescript"],
+    github: "https://github.com/hackerpsyco/volunteers_management",
+    link: "https://volunteers-management.vercel.app/",
+  },
+   {
+    id: 3,
+    title: "Innoalaxy",
+    description:
+      "Innoalaxy is a dynamic platform built with React and Tailwind CSS, designed to foster innovation and collaboration. It offers a user-friendly interface for sharing ideas, connecting with like-minded individuals, and showcasing projects. The platform emphasizes creativity and community engagement, making it an ideal space for innovators to thrive.",
+    image: "https://user2995.na.imgto.link/public/20260224/screenshot-2026-02-24-171434.avif",
+    tags: ["React", "tailwind CSS"],
+    github: "https://github.com/hackerpsyco/resurrect-code",
+    link: "https://www.innoalaxy.in/",
+  },
+
+ 
+   {
+    id: 4,
     title: "Team Management System",
     description:
       "team management system paltform using nextjs and drizzle orm for database management and also create different teams in tech like frontend, backend with community inside problems share.",
     image: "https://i.ibb.co/RGg1Fdpb/Screenshot-2025-11-10-004843.png",
     tags: ["Nextjs", "Drizzle ORM", "tailwind CSS"],
     github: "https://github.com/Piyush105454/humanlink-anonymous-problem-solver",
-    link: "https://notable-carlina-piyush105454-4bf50dc7.koyeb.app/",
+    link: "https://humanlink-anonymous-problem-solver-kappa.vercel.app/",
   },
   {
-    id: 2,
+    id: 5,
     title: "Swapeat",
     description:
       "SwapEat is a web-based platform built using Django, featuring real-time location tracking with Leaflet.js and chat integration using Nextjs Channels and WebSockets. It enables efficient food sharing by connecting users through a responsive interface and secure backend. The system supports user authentication, live messaging, and geolocation-based listings.",
