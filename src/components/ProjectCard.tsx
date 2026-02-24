@@ -1,24 +1,27 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Tilt } from 'react-tilt';
-import { Project } from '../types';
-import { ExternalLink, Github } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { Tilt } from "react-tilt";
+import { Project } from "../types";
+import { ExternalLink, Github } from "lucide-react";
 
-const ProjectCard: React.FC<{ project: Project, index: number }> = ({ project, index }) => {
-  const defaultOptions = {
-    max: 25,
-    scale: 1.05,
-    speed: 450,
+const ProjectCard: React.FC<{ project: Project; index: number }> = ({
+  project,
+  index,
+}) => {
+  const tiltOptions = {
+    max: 15,
+    scale: 1.03,
+    speed: 400,
   };
-  
+
   const cardVariants = {
-    hidden: { opacity: 0, y: 50 },
+    hidden: { opacity: 0, y: 40 },
     visible: (i: number) => ({
       opacity: 1,
       y: 0,
       transition: {
-        delay: i * 0.1,
-        duration: 0.5,
+        delay: i * 0.08,
+        duration: 0.45,
         ease: "easeOut",
       },
     }),
@@ -31,50 +34,85 @@ const ProjectCard: React.FC<{ project: Project, index: number }> = ({ project, i
       animate="visible"
       custom={index}
     >
-      <Tilt options={defaultOptions} className="w-full">
-        <div className="bg-[#1a1a2e] backdrop-blur-md bg-opacity-80 p-5 rounded-2xl w-full h-full flex flex-col shadow-[0_0_15px_rgba(30,144,255,0.15)]">
-          <div className="relative w-full h-[230px] overflow-hidden rounded-xl">
+      <Tilt options={tiltOptions} className="w-full">
+        <div className="bg-[#1a1a2e] rounded-2xl overflow-hidden shadow-lg hover:shadow-[0_0_25px_rgba(30,144,255,0.25)] transition-all duration-300 flex flex-col">
+
+          {/* ✅ Clickable Image */}
+          <div
+            className="relative w-full h-[220px] group cursor-pointer"
+            onClick={() => project.link && window.open(project.link, "_blank")}
+          >
             <img
               src={project.image}
               alt={project.title}
-              className="w-full h-full object-cover rounded-xl"
+              className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 flex justify-end m-3 gap-2">
+
+            {/* ✅ Hover Overlay */}
+            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+              <motion.div
+                initial={{ scale: 0.8, opacity: 0 }}
+                whileHover={{ scale: 1 }}
+                animate={{ scale: 1, opacity: 1 }}
+                className="text-white text-sm bg-[#1E90FF] px-4 py-2 rounded-full"
+              >
+                View Project
+              </motion.div>
+            </div>
+
+            {/* ✅ Top-right Buttons */}
+            <div className="absolute top-3 right-3 flex gap-2">
               {project.github && (
-                <motion.div
-                  whileHover={{ scale: 1.2 }}
-                  className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
-                  onClick={() => window.open(project.github, "_blank")}
+                <motion.button
+                  whileHover={{ scale: 1.15 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-black/70 backdrop-blur-md p-2 rounded-full text-white hover:bg-black"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    window.open(project.github, "_blank");
+                  }}
                 >
-                  <Github className="w-1/2 h-1/2 text-white" />
-                </motion.div>
+                  <Github size={18} />
+                </motion.button>
               )}
+
               {project.link && (
-                <motion.div
-                  whileHover={{ scale: 1.2 }}
-                  className="bg-[#1E90FF] w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
-                  onClick={() => window.open(project.link, "_blank")}
+                <motion.button
+                  whileHover={{ scale: 1.15 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-[#1E90FF] p-2 rounded-full text-white hover:bg-[#187bcd]"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    window.open(project.link, "_blank");
+                  }}
                 >
-                  <ExternalLink className="w-1/2 h-1/2 text-white" />
-                </motion.div>
+                  <ExternalLink size={18} />
+                </motion.button>
               )}
             </div>
           </div>
 
-          <div className="mt-5">
-            <h3 className="text-white font-bold text-[24px]">{project.title}</h3>
-            <p className="mt-2 text-gray-300 text-[14px]">{project.description}</p>
-          </div>
+          {/* ✅ Content */}
+          <div className="p-5 flex flex-col flex-grow">
+            <h3 className="text-white font-semibold text-lg">
+              {project.title}
+            </h3>
 
-          <div className="mt-4 flex flex-wrap gap-2">
-            {project.tags.map((tag) => (
-              <p
-                key={`${project.id}-${tag}`}
-                className="text-[14px] text-[#39FF14]"
-              >
-                #{tag}
-              </p>
-            ))}
+            <p className="mt-2 text-gray-400 text-sm leading-relaxed">
+              {project.description}
+            </p>
+
+            {/* ✅ Tags */}
+            <div className="mt-4 flex flex-wrap gap-2">
+              {project.tags.map((tag) => (
+                <span
+                  key={`${project.id}-${tag}`}
+                  className="text-xs bg-[#0f3460] text-[#39FF14] px-2 py-1 rounded-md"
+                >
+                  #{tag}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </Tilt>
