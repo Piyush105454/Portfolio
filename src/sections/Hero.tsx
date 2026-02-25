@@ -55,7 +55,7 @@ const Hero: React.FC = () => {
             </motion.button>
             
 <motion.a
-  href="https://drive.google.com/uc?export=download&id=1WCTfoR32KMxXSiOmaSXgMrwmjZYM1u4Q"
+  href="https://drive.google.com/file/d/1dapNQSWmEozta4VCf0_zQzlSjFgDBtxH/view?usp=sharing"
   download
   target="_blank"
   rel="noopener noreferrer"
