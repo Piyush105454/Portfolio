@@ -45,17 +45,17 @@ const Contact: React.FC = () => {
     { 
       name: 'GitHub', 
       icon: <Github size={24} className="text-white" />, 
-      link: 'https://github.com/' 
+      link: 'https://github.com/Piyush105454' 
     },
     { 
       name: 'LinkedIn', 
       icon: <Linkedin size={24} className="text-white" />, 
-      link: 'https://linkedin.com/' 
+      link: 'https://www.linkedin.com/in/piyush-tamoli-751b2125a' 
     },
     { 
       name: 'Instagram', 
       icon: <Instagram size={24} className="text-white" />, 
-      link: 'https://instagram.com/' 
+      link: 'https://www.instagram.com/piyush_tamoli/' 
     },
   ];
 
