@@ -82,7 +82,7 @@ const Hero: React.FC = () => {
             <motion.a
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              href="https://drive.google.com/file/d/1dapNQSWmEozta4VCf0_zQzlSjFgDBtxH/view?usp=sharing"
+              href="https://drive.google.com/file/d/1k4-QpduFRFb6phZjTq3A7tkx-72fEF2Z/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="px-7 py-3 rounded-full border border-border text-foreground font-medium text-sm hover:border-foreground/40 transition-colors"
