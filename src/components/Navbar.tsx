@@ -61,7 +61,7 @@ const Navbar: React.FC = () => {
           ))}
           <li className="ml-3">
             <a
-              href="https://drive.google.com/file/d/1k4-QpduFRFb6phZjTq3A7tkx-72fEF2Z/view?usp=sharing
+              href="https://drive.google.com/file/d/1k4-QpduFRFb6phZjTq3A7tkx-72fEF2Z/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="px-5 py-2 rounded-full bg-foreground text-background text-[13px] font-semibold hover:opacity-80 transition-opacity"
