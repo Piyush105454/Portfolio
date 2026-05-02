@@ -56,8 +56,8 @@ const Footer: React.FC = () => {
             <h3 className="font-display font-semibold text-foreground text-sm mb-4">Contact</h3>
             <div className="space-y-2.5 text-sm text-foreground-muted">
               <p>Bhopal, Madhya Pradesh, India</p>
-              <a href="mailto:piyushtamoli105454@gmail.com" className="block hover:text-foreground transition-colors">
-                piyushtamoli105454@gmail.com
+              <a href="mailto:piyushmodi812@gmail.com" className="block hover:text-foreground transition-colors">
+                piyushmodi812@gmail.com
               </a>
             </div>
           </div>
