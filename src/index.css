@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --background-light: 0 0% 97%;
+  --foreground: 0 0% 8%;
+  --foreground-muted: 0 0% 45%;
+  --primary: 0 0% 8%;
+  --primary-foreground: 0 0% 100%;
+  --accent: 0 0% 8%;
+  --accent-foreground: 0 0% 100%;
+  --highlight: 0 0% 25%;
+  --highlight-foreground: 0 0% 100%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 8%;
+  --border: 0 0% 90%;
+  --ring: 0 0% 8%;
+  --muted: 0 0% 96%;
+  --muted-foreground: 0 0% 45%;
+}
+
+.dark {
+  --background: 0 0% 5%;
+  --background-light: 0 0% 8%;
+  --foreground: 0 0% 95%;
+  --foreground-muted: 0 0% 60%;
+  --primary: 0 0% 95%;
+  --primary-foreground: 0 0% 5%;
+  --accent: 0 0% 95%;
+  --accent-foreground: 0 0% 5%;
+  --highlight: 0 0% 70%;
+  --highlight-foreground: 0 0% 5%;
+  --card: 0 0% 8%;
+  --card-foreground: 0 0% 95%;
+  --border: 0 0% 15%;
+  --ring: 0 0% 95%;
+  --muted: 0 0% 12%;
+  --muted-foreground: 0 0% 55%;
+}
+
+/* Smooth theme transition */
+*, *::before, *::after {
+  transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+              color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+              fill 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              stroke 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Sora', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+code, .font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--foreground-muted));
+}
+
+/* Selection */
+::selection {
+  background: hsl(var(--foreground) / 0.12);
+  color: hsl(var(--foreground));
+}
+
+/* Clean card style */
+.clean-card {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.clean-card:hover {
+  border-color: hsl(var(--foreground) / 0.2);
+  box-shadow: 0 8px 30px -12px hsl(var(--foreground) / 0.1);
+}
+
+/* Section divider */
+.section-divider {
+  width: 48px;
+  height: 2px;
+  background: hsl(var(--foreground));
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+/* Gradient text - subtle monochrome */
+.gradient-text {
+  background: linear-gradient(135deg, hsl(var(--foreground)), hsl(var(--foreground-muted)));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
